@@ -37,3 +37,13 @@ jobs:
         with: 
           name: SharpSnake
           path: D:\a\SharpSnake\SharpSnake\SharpSnake\bin\x64\Release\SharpSnake.exe
+
+      - name: Upload Binary To Release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: D:\a\SharpSnake\SharpSnake\SharpSnake\bin\x64\Release\SharpSnake.exe
+          asset_name: SharpSnake.exe
+          tag: ${{ github.ref }}
+          overwrite: true
+          body: "This is my release text"
