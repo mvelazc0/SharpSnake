@@ -41,7 +41,7 @@ namespace SharpSnake
         ";
 
             Console.WriteLine(banner);
-            Console.WriteLine("Leading...");
+            Console.WriteLine("Loading...");
             Thread.Sleep(3000);
 
             if (!Populated)
