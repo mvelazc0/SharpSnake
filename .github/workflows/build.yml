@@ -1,4 +1,4 @@
-name: Build SharpSnakes
+name: Build SharpSnake
 
 on:  
   push:
