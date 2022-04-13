@@ -35,5 +35,5 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with: 
-          name: assets-for-download
-          path: D:\a\SharpSnake\SharpSnake\SharpSnake\bin\x64\Release\
+          name: SharpSnake
+          path: D:\a\SharpSnake\SharpSnake\SharpSnake\bin\x64\Release\SharpSnake.exe
