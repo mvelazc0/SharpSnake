@@ -50,6 +50,7 @@ jobs:
           body: "Latest Release."
 
   scan:
+    needs: build
     runs-on: ubuntu-latest
     name: AV scan
     steps:
