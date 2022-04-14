@@ -59,9 +59,6 @@ jobs:
         with:
           name: SharpSnake
           path: SharpSnake/
-      - name: List Files
-        run: |
-          ls -lahR
       - name: Malware Scanner
         uses: dell/common-github-actions/malware-scanner@main
         with:
