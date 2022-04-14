@@ -1,4 +1,4 @@
-name: Build SharpSnake
+name: Build and Scan SharpSnake
 
 on:  
   push:
@@ -48,3 +48,18 @@ jobs:
           tag: v1.1
           overwrite: true
           body: "Latest Release."
+
+  scan:
+    runs-on: ubuntu-latest
+    name: AV scan
+    steps:
+      - name: Download Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: SharpSnake
+          path: SharpSnake/
+      - name: Malware Scanner
+        uses: dell/common-github-actions/malware-scanner@main
+        with:
+          directories: SharpSnake/
+          options: -ri
