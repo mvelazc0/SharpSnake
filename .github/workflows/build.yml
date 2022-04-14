@@ -65,5 +65,5 @@ jobs:
       - name: Malware Scanner
         uses: dell/common-github-actions/malware-scanner@main
         with:
-          directories: /home/runner/work/SharpSnake/SharpSnake/SharpSnake
+          directories: ./SharpSnake/SharpSnake.exe
           options: -ri
