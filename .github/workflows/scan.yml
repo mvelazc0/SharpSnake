@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     name: AV scan
     steps:
-    - uses: actions/checkout@v2
-    - name: Git AV Scan
-      uses: djdefi/gitavscan@main
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: Malware Scanner
+        uses: dell/common-github-actions/malware-scanner@main
+        with:
+          directories: .
+          options: -ri
