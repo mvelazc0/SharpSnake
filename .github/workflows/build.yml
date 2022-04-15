@@ -43,9 +43,9 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: D:\a\SharpSnake\SharpSnake\SharpSnake\bin\x64\Release\SharpSnake.exe
-          release_name: Latest
+          release_name: v1.0
           asset_name: SharpSnake.exe
-          tag: v1.1
+          tag: v1.0
           overwrite: true
           body: "Latest Release."
 

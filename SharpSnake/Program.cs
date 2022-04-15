@@ -13,8 +13,6 @@ namespace SharpSnake
     class Program
     {
 
-        //X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
-
         static readonly int gridW = 90;
         static readonly int gridH = 25;
         static Cell[,] grid = new Cell[gridH, gridW];
