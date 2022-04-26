@@ -66,8 +66,8 @@ jobs:
           directories: ./SharpSnake/SharpSnake.exe
           options: -ri
 
-     - name: Check Code
+      - name: Check Code
         uses: actions/checkout@v2
 
-    - name: ClamAV Source Code Scan
+      - name: ClamAV Source Code Scan
         uses: djdefi/gitavscan@main
