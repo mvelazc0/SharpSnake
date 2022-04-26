@@ -1,4 +1,4 @@
-name: Build SharpSnake
+name: Build and Scan SharpSnake
 
 on:  
   push:
@@ -48,3 +48,27 @@ jobs:
           tag: v1.1
           overwrite: true
           body: "Latest Release."
+
+  scan:
+    needs: build
+    runs-on: ubuntu-latest
+    name: AV scan
+    steps:
+      - name: Download Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: SharpSnake
+          path: SharpSnake/
+
+      - name: ClamAV Scan
+        uses: dell/common-github-actions/malware-scanner@main
+        with:
+          directories: ./SharpSnake/SharpSnake.exe
+          options: -ri
+
+      - name: Virustotal Scan
+        uses: crazy-max/ghaction-virustotal@v2
+        with:
+          vt_api_key: ${{ secrets.VT_API_KEY }}
+          files: |
+            ./SharpSnake/SharpSnake.exe
