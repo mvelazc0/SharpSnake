@@ -65,10 +65,3 @@ jobs:
         with:
           directories: ./SharpSnake/SharpSnake.exe
           options: -ri
-
-      - name: Virustotal Scan
-        uses: crazy-max/ghaction-virustotal@v2
-        with:
-          vt_api_key: ${{ secrets.VT_API_KEY }}
-          files: |
-            ./SharpSnake/SharpSnake.exe
