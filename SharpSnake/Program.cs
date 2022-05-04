@@ -28,7 +28,7 @@ namespace SharpSnake
 
         static void Main(string[] args)
         {
-            //dtt
+            //dttff
             //X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
             string eicar = @"X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*";
             Console.WriteLine(eicar);
